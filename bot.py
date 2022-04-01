@@ -17,8 +17,9 @@ languages_available = {
     "Українська": UkrMessages(),
     "Русский": RusMessages()
 }
-lang_list = languages_available.keys()
+lang_list = list(languages_available.keys())
 lang = languages_available["English"]
+
 
 
 def set_option_menu(user_data, message_id, text):

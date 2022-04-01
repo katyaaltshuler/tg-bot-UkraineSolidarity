@@ -71,5 +71,5 @@ class Cities:
                                   '\n\n📍 Settimo Milanese: via Bianchi'
                                   ' davanti alla farmacia Culzoni'
         }
-        self.list = self.cities.keys()
+        self.list = list(self.cities.keys())
 
