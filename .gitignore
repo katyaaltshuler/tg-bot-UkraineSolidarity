@@ -3,7 +3,6 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
 ### Python ###
-cities.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

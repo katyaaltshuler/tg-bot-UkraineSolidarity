@@ -17,7 +17,7 @@ languages_available = {
     "Українська": UkrMessages(),
     "Русский": RusMessages()
 }
-lang_dict = [key for key in languages_available]
+lang_list = languages_available.keys()
 lang = languages_available["English"]
 
 
@@ -37,7 +37,7 @@ def start(message):
 
 
 # ----------------------Set Main Menu----------------
-@bot.message_handler(text=lang_dict)
+@bot.message_handler(text=lang_list)
 def main_manu_message(message):
     global lang
     lang = languages_available[message.text]
@@ -50,7 +50,7 @@ def main_manu_message(message):
 
 
 # ---------------Show Volunteer Centers Addresses--------------
-@bot.message_handler(text=data.dict)
+@bot.message_handler(text=data.list)
 def view_address_message(message):
     markup = types.InlineKeyboardMarkup(row_width=1)
     item = types.InlineKeyboardButton(lang.option_aid, callback_data=lang.callback_aid)
